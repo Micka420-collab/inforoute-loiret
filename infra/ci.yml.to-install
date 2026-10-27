@@ -1,0 +1,28 @@
+# A copier vers .github/workflows/ci.yml (mon token GitHub n'a pas le droit d'écrire dans .github/workflows)
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir: [api, app]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Skip if package not initialised
+        id: has
+        run: |
+          if [ -f "${{ matrix.dir }}/package.json" ]; then echo "ok=true" >> $GITHUB_OUTPUT; fi
+      - if: steps.has.outputs.ok == 'true'
+        working-directory: ${{ matrix.dir }}
+        run: |
+          npm ci
+          npm run lint
+          npm run typecheck
+          npm test
