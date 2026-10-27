@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "InfoRoute Loiret",
+    "slug": "inforoute-loiret",
+    "scheme": "inforoute",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": ["expo-router"],
+    "ios": { "bundleIdentifier": "fr.inforouteloiret.app" },
+    "android": { "package": "fr.inforouteloiret.app" }
+  }
+}
