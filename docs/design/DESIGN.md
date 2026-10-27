@@ -23,5 +23,21 @@ Concept (Sophie) : « Sache avant de partir ». Info routière du Loiret en 5 se
 - Visuel Insta auto en 1 tap.
 - Haptique léger au tap, « success » à l'envoi. Animations < 250 ms. Skeletons plutôt que spinners.
 
+## Référence : compte Insta @inforouteloiret
+Source : capture d'écran fournie par naka (couleurs estimées à l'œil, à valider).
+
+**Ce qu'on voit**
+- 28,9 k followers, compte vérifié, site www.irl45.com. Highlights : Events, Site web.
+- Logo : rond blanc, forme bleu et vert avec route grise, « INFO ROUTE » en gras, « LOIRET » en vert dessous.
+- Palette : bleu marine, blanc, vert (route dégagée), rouge (incident). Communiqués marine/blanc, titres en majuscules condensées grasses.
+- Posts : captures de carte trafic façon Google Maps (routes vertes, icône rouge d'incident), photos de panneaux lumineux (ambre), ton parfois humoristique.
+
+**Décisions pour reprendre le design en mieux**
+- Garder l'identité marine + vert + rouge pour rester reconnaissable. Le jaune #FFC400 reste réservé à l'action principale.
+- Vert « dégagé » ≈ #2BB673 (celui du logo) ; rapprocher notre bleu nuit de leur marine (tokens à ajuster après le squelette API).
+- Titres condensés gras (Barlow Condensed), cohérent avec leurs communiqués.
+- Visuel Insta auto : carte trafic stylisée + pastille de gravité + axe, mêmes codes.
+- Amélioration : carte temps réel et push, là où ils n'ont que des images statiques.
+
 ## Choix techniques
 NativeWind branché sur design/tokens.json ; composants maison Button, SeverityBadge, AlertCard ; MapLibre style sombre (OpenFreeMap ou MapTiler, licence et quota à vérifier) ; @gorhom/bottom-sheet ; expo-haptics ; Reanimated.
